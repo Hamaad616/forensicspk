@@ -810,8 +810,11 @@
                             </svg>
                         </div>
 
-                        <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white text-center">COMING SOON</h2>
+                        <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">{{ config('app.name') }}</h2>
 
+                        <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
+                            COMING SOON
+                        </p>
                     </div>
                 </div>
             </div>
