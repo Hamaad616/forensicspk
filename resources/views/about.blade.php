@@ -145,7 +145,7 @@
                     <br>
                     Forensic Genetics, Molecular Genetics Ancient DNA
                     <br>
-                    <a href="mailto:inam@genetics@gmail.com" style="text-decoration: underline">inam@genetics@gmail.com</a>
+                    <a href="mailto:inamgenetics@gmail.com" style="text-decoration: underline">inamgenetics@gmail.com</a>
                 </div>
         </div>
     </div>
