@@ -23,7 +23,7 @@
             <a class="navbar-brand me-0 pe-0" href="{{ route('home') }}">
                 <img src="{{ asset('images/FSP.png') }}" alt="Logo" width="50" class="d-inline-block align-text-top">
             </a>
-            <h1 class="ms-2">{{ config('app.name') }}</h1>
+            <h1 class="ms-2"><a href="{{ route('home') }}" class="text-dark" style="text-decoration: none;">{{ config('app.name') }}</a></h1>
         </div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>

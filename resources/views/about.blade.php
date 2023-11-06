@@ -13,6 +13,11 @@
 
     <!-- Styles -->
     <style>
+        body{
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
         p {
             line-height: 1.6;
             text-align: justify;
@@ -28,7 +33,7 @@
             <a class="navbar-brand me-0 pe-0" href="{{ route('home') }}">
                 <img src="{{ asset('images/FSP.png') }}" alt="Logo" width="50" class="d-inline-block align-text-top">
             </a>
-            <h1 class="ms-2">{{ config('app.name') }}</h1>
+            <h1 class="ms-2"><a href="{{ route('home') }}" class="text-dark" style="text-decoration: none">{{ config('app.name') }}</a></h1>
         </div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -118,11 +123,15 @@
                     margin-bottom: 30px;">
             </div>
             <div class="">
-                <img src="{{ asset('images/professor.jpg') }}" alt="professor" height="250" style="float: right; box-sizing: border-box;
+                <figure style="float: right">
+                    <img src="{{ asset('images/professor.jpg') }}" alt="professor" height="250" style="float: right; box-sizing: border-box;
                 max-width: 100%;
                 vertical-align: bottom;
-                margin-left: 20px;
+                margin-left: 18px;
                 ">
+                    <figcaption style="text-align: center; opacity: .5; font-size: 12px; margin-top: 16rem">Dr Inamullah, Forensic Scientist</figcaption>
+                </figure>
+                <strong class="mt-2 mb-2">Mission Statement</strong>
                 <p class="mb-0" style="counter-reset: footnotes;">
                     Forensic Pakistan is dedicated to its mission of advancing forensic science in Pakistan. We are committed to empowering justice, promoting accountability, and ensuring a just society. Our platform serves as a comprehensive resource hub, providing access to accurate information, fostering expert knowledge, and encouraging collaboration among professionals in the field. Our primary goal is to improve the quality and reliability of forensic evidence presented in courts, enhance investigative procedures, and contribute to a more equitable and informed criminal justice system in Pakistan. With a commitment to excellence, integrity, and transparency, we aim to play a pivotal role in improving legal outcomes, upholding the principles of fairness, and enhancing the role of forensics in the country.
                 </p>
