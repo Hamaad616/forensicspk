@@ -97,26 +97,50 @@
                         <li><a class="dropdown-item" href="#">Forensic Entomology</a></li>
                     </ul>
                 </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Articles
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Audio & Video</a></li>
+                        <li><a class="dropdown-item" href="#">Blood Stains</a></li>
+                        <li><a class="dropdown-item" href="#">CSI</a></li>
+                        <li><a class="dropdown-item" href="#">Digital Evidence</a></li>
+                        <li><a class="dropdown-item" href="#">DNA</a></li>
+                        <li><a class="dropdown-item" href="#">CSI</a></li>
+                        <li><a class="dropdown-item" href="#">Firearms</a></li>
+                        <li><a class="dropdown-item" href="#">Toxicology</a></li>
+                        <li><a class="dropdown-item" href="#">Fingerprints</a></li>
+                        <li><a class="dropdown-item" href="#">Questioned Documents</a></li>
+                        <li><a class="dropdown-item" href="#">Evidence & Witnesses</a></li>
+                        <li><a class="dropdown-item" href="#">Forensic Entomology</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Alumni
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Test</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </div>
 </nav>
+
 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
     <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        @foreach(File::files(public_path('forensic_science_home_slideshow')) as $key => $file)
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{ $key }}" @if($key === 0) class="active" @endif aria-current="true" aria-label="Slide {{ $key }}"></button>
+        @endforeach
     </div>
     <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img src="{{ asset('images/forensic_science.jpeg') }}" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-            <img src="{{ asset('images/forensic_science.jpeg') }}" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-            <img src="{{ asset('images/forensic_science.jpeg') }}" class="d-block w-100" alt="...">
-        </div>
+        @foreach(File::files(public_path('forensic_science_home_slideshow')) as $key => $file)
+            <div class="carousel-item @if($key === 0) active @endif">
+                <img src="{{ asset('forensic_science_home_slideshow/'.$file->getFilename()) }}" width="100%" height="580" style="background-size: cover; background-repeat: no-repeat" class="d-block" alt="...">
+            </div>
+        @endforeach
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
