@@ -129,7 +129,7 @@
     </div>
 </nav>
 
-<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
         @foreach(File::files(public_path('forensic_science_home_slideshow')) as $key => $file)
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{ $key }}" @if($key === 0) class="active" @endif aria-current="true" aria-label="Slide {{ $key }}"></button>
